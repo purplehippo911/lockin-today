@@ -11,6 +11,8 @@ Check out the links here to download:
 - [Git]
 
 
+### Step 2 -- Cloning repository
+
 ```
 git clone https://github.com/purplehippo911/pomodoro-app.git
 
@@ -24,7 +26,7 @@ On LINUX it is:
 cd pomodoro-app
 ```
 
-### Step 2 -- installing Tauri-cli
+### Step 3 -- installing Tauri-cli
 
 Install tauri-cli
 
@@ -37,7 +39,7 @@ npm install -g @tauri/apps/cli
 
 ```
 
-### Step 3 -- Finally building the project
+### Step 4 -- Finally building the project
 
 ```
 # Either this way
@@ -48,13 +50,16 @@ cargo tauri build
 
 ```
 
-### Step 4 -- Find the executable file
+### Step 5 -- Find the executable file
 go under `src-tauri/target/release` and run the executable app either by running it in the terminal or by clicking on it when you're inside your file manager app.
 
 -----
 [Delta wave with Brown Noise by PureBinaural at pixabay.com](https://pixabay.com/music/ambient-purebinaural-25-hz-delta-binaural-beats-with-brown-noise-484855/)
+
 [Beta Waves Meditation Flute (short) by Siarhei_korbut](https://pixabay.com/music/meditationspiritual-beta-waves-meditation-flute-short-386121/)
+
 [Binaural Beta waves by Mr Washingt0n](https://pixabay.com/music/ambient-binaural-beta-waves-491929/)
+
 [alarm clock sound effect by gecop at freesound.org](https://freesound.org/people/gecop/sounds/522119/)
 
 Made with Tauri, Vue and Typescript
