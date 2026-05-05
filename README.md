@@ -58,9 +58,9 @@ deno task build
 
 ### Step 5 -- Find the executable file
 
-The name of the executable file should be `lockin-today` under `src/target/release`
+Inside `src-tauri/target/release`
 
-Run that file
+Run the executable file that starts with lockin-today
 
 -----
 
