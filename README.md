@@ -1,6 +1,16 @@
 # Lock In Now - A focus app with todos, pomodoro timer and focus music
 
-## Downloading/Building
+## ARCH LINUX USERS -- Download through AUR
+
+```
+# If using paru
+paru -S lockin-today-git
+
+#if using yay
+yay -S lockin-today-git
+```
+
+## Downloading for every other platform 
 
 ### Step 1 -- Requirements and setup
 
@@ -8,13 +18,13 @@ Check out the links here to download:
 
 - [Rust](https://rustup.rs)
 - [Deno](https://deno.land/#installation)
-- [Git]
+- Git
 
 
 ### Step 2 -- Cloning repository
 
 ```
-git clone https://github.com/purplehippo911/pomodoro-app.git
+git clone https://github.com/purplehippo911/lockin-today.git
 
 ```
 
@@ -23,7 +33,7 @@ Now go into the newly made directory before you run the other commands.
 On LINUX it is:
 
 ```
-cd pomodoro-app
+cd lockin-today 
 ```
 
 ### Step 3 -- installing Tauri-cli
@@ -51,7 +61,9 @@ cargo tauri build
 ```
 
 ### Step 5 -- Find the executable file
-go under `src-tauri/target/release` and run the executable app either by running it in the terminal or by clicking on it when you're inside your file manager app.
+The name of the executable file should be `lockin-today` under `src/target/release`
+
+Run that file
 
 -----
 
