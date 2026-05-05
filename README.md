@@ -54,6 +54,11 @@ cargo tauri build
 go under `src-tauri/target/release` and run the executable app either by running it in the terminal or by clicking on it when you're inside your file manager app.
 
 -----
+
+## Attribution
+
+Thanks to the creators of these assets, that I used for this project
+
 [Delta wave with Brown Noise by PureBinaural at pixabay.com](https://pixabay.com/music/ambient-purebinaural-25-hz-delta-binaural-beats-with-brown-noise-484855/)
 
 [Beta Waves Meditation Flute (short) by Siarhei_korbut](https://pixabay.com/music/meditationspiritual-beta-waves-meditation-flute-short-386121/)
