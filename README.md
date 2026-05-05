@@ -7,14 +7,13 @@ A focus app with todos, pomodoro timer and focus music
 
 ## ARCH LINUX -- Download through AUR
 
-IF using Paru:
-```
-paru -S lockin-today-git
-```
 
-IF using Yay:
+
 ```
-yay -S lockin-today-git
+sudo pacman -S webkit2gtk-4.1 gtk3
+paru -S lockin-today-git
+
+# Or if you use yay, replace the last line with yay -S lockin-today-git
 ```
 
 ## Downloading for every other platform 
