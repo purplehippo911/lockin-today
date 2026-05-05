@@ -7,14 +7,13 @@ A focus app with todos, pomodoro timer and focus music
 
 ## ARCH LINUX -- Download through AUR
 
-IF using Paru:
-```
-paru -S lockin-today-git
-```
 
-IF using Yay:
+
 ```
-yay -S lockin-today-git
+sudo pacman -S webkit2gtk-4.1 gtk3
+git clone https://aur.archlinux.org/lockin-today-git.git
+cd lockin-today-git
+makepkg -si
 ```
 
 ## Downloading for every other platform 
@@ -59,9 +58,9 @@ deno task build
 
 ### Step 5 -- Find the executable file
 
-The name of the executable file should be `lockin-today` under `src/target/release`
+Inside `src-tauri/target/release`
 
-Run that file
+Run the executable file that starts with lockin-today
 
 -----
 
