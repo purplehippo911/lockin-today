@@ -12,7 +12,7 @@ A focus app with todos, pomodoro timer and focus music
 ```
 sudo pacman -S webkit2gtk-4.1 gtk3
 git clone https://aur.archlinux.org/lockin-today-git.git
-cd lockin-today
+cd lockin-today-git
 mkpkg -si
 ```
 
