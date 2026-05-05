@@ -41,7 +41,7 @@ cd lockin-today
 Installing the packages:
 
 ```
-npm install
+deno install
 ```
 
 Finally building it:
