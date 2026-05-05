@@ -1,12 +1,19 @@
-# Lock In Now - A focus app with todos, pomodoro timer and focus music
+# Lock In Today 
 
-## ARCH LINUX USERS -- Download through AUR
+A focus app with todos, pomodoro timer and focus music
 
+## Web version 
+[lockin-today webapp](https://pomodoro-app.7c7a4f33-a16b-46f1-98bb-da21899751a8.workers.dev/)
+
+## ARCH LINUX -- Download through AUR
+
+IF using Paru:
 ```
-# If using paru
 paru -S lockin-today-git
+```
 
-#if using yay
+IF using Yay:
+```
 yay -S lockin-today-git
 ```
 
