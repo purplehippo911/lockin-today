@@ -26,6 +26,12 @@
         </li>
       </ul>
     </section>
+    <section class="iframe-section">
+      <a href="#" @click="toggleIframe"> Spotify playlist ></a>
+      <div ref="iframe__container" class="hide iframe-section__container">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4v7RvD2voKpl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -36,24 +42,25 @@ export default {
   data() {
     return {
       minutes: 24,
-      seconds: 0,
-      displayMinutes: '25',
-      displaySeconds: '00',
+      seconds: 59,
+      displayMinutes: '24',
+      displaySeconds: '59',
       isRunning: false,
       intervalId: null,
       intervalId2: null,
       todos: [],
       todoInput: "",
-      alarmSound: new Audio("assets/alarm.wav"),
-      relaxSound: new Audio("assets/relaxing.mp3"),
-      focusSound: new Audio("assets/beta_waves.mp3"),
+      alarmSound: new Audio("https://pub-13f18a1cbe1b4e38b7891616866d988e.r2.dev/audio/alarm.wav"),
+      relaxSound: new Audio("https://pub-13f18a1cbe1b4e38b7891616866d988e.r2.dev/audio/relaxing.mp3"), 
+      focusSound: new Audio("https://pub-13f18a1cbe1b4e38b7891616866d988e.r2.dev/audio/beta_waves.mp3"), 
       isPlaying: false,
-      isBreak: false 
+      isBreak: false,
+      isIframeOpen: false,
     }
   },
   
   async mounted() {
-    const saved = localStorage.getItem('todos')
+    const saved = localStorage.getItem('todos');
     if (saved) {
       this.todos = JSON.parse(saved)
     }
@@ -75,7 +82,21 @@ export default {
   },
 
   methods: {
+    toggleIframe() {
+      if(!this.isIframeOpen) {
+        console.log("removing classlist");
+        this.$refs.iframe__container.classList.remove("hide");
+        this.isIframeOpen = true;
+      }
+      else {
+        console.log("adding classlist");
+        this.$refs.iframe__container.classList.add("hide");
+        this.isIframeOpen = false;
+      }
+    },
     playFocusMusic() {
+      if (!this.focusSound) return
+
       if(!this.isPlaying) {
         this.focusSound.play();
         this.isPlaying = true;
@@ -96,18 +117,11 @@ export default {
       }
     },
 
-    stopSounds() {
-      this.focusSound.pause();
-      this.focusSound.currentTime = 0;
-      this.relaxSound.pause();
-      this.relaxSound.currentTime = 0;
-    },
-
     startBreakTimer() {
       this.isRunning = true;
       this.isBreak = true;
       this.seconds = 59;
-      this.minutes = 25; 
+      this.minutes = 5; 
 
       // Break minutes (60s interval)
       this.intervalId = setInterval(() => {
@@ -135,7 +149,7 @@ export default {
             this.isRunning = false;
             this.isBreak = false;
             alert("Break over! Ready to work?");
-            this.minutes = 25;
+            this.minutes = 24;
             this.seconds = 0;
           }
         }
@@ -147,8 +161,6 @@ export default {
       
       this.isRunning = true;
       this.isBreak = false;
-      this.stopSounds();
-      this.seconds = 59;
 
       this.intervalId = setInterval(() => {
         if (this.isRunning && !this.isBreak) {
@@ -179,16 +191,19 @@ export default {
       clearInterval(this.intervalId2);
       this.isRunning = false;
       
+      if (this.alarmSound) {
       this.alarmSound.play().catch(err => {
         alert('Audio play failed', err);
       });
+      }
       
       this.notifyPomodoroEnd();
-      this.stopSounds();
       
+      if (this.relaxSound) {
       this.relaxSound.play().catch(err => {
         alert('Relax audio failed', err);
       });
+      }
       
       // Auto start break after 2 seconds
       setTimeout(() => {
@@ -204,7 +219,6 @@ export default {
         this.intervalId = null;
         this.intervalId2 = null;
         this.isRunning = false;
-        this.stopSounds();
       }
     },
 
@@ -214,7 +228,6 @@ export default {
       this.isBreak = false;
       this.minutes = 24;
       this.seconds = 0;
-      this.stopSounds();
     },
 
     addTodo() {
@@ -246,12 +259,8 @@ export default {
 }
 </script>
 
-<!-- Your exact same styles unchanged -->
-<style>
-/* ... your full styles here - unchanged ... */
-</style>
-
 <style >
+
 
 @keyframes break-text-animation {
   0% {
@@ -373,5 +382,24 @@ body {
    color: white;
    opacity: .5rem;
  }
+
+ .iframe-section {
+   flex-direction: column;
+   gap: 2rem;
+   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.3rem;
+ }
+
+.iframe-section__container {
+  width: 70%;
+ }
+
+.hide {
+ display: none;
+}
 
 </style>

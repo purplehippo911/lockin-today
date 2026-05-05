@@ -1,19 +1,32 @@
 # Lock In Now - A focus app with todos, pomodoro timer and focus music
 
-## Linux download
-Either get the AppImage or build it yourself. Guide below
+## Downloading/Building
 
-## Windows and others
-Dont have the .exe file so you'll have to download and build. should only take a couple of minutes.
+### Step 1 -- Requirements and setup
 
-## Build app from source
-Relax, you wont be building it from scratch. Just compiling the source files to a an application that runs natively on your OS.
-
-### Requirements
 Check out the links here to download:
 
-- [Rust downloaded](https://rustup.rs)
+- [Rust](https://rustup.rs)
 - [Deno](https://deno.land/#installation)
+- [Git]
+
+
+```
+git clone https://github.com/purplehippo911/pomodoro-app.git
+
+```
+
+Now go into the newly made directory before you run the other commands.
+
+On LINUX it is:
+
+```
+cd pomodoro-app
+```
+
+### Step 2 -- installing Tauri-cli
+
+Install tauri-cli
 
 ```
 # Either this way
@@ -24,27 +37,21 @@ npm install -g @tauri/apps/cli
 
 ```
 
+### Step 3 -- Finally building the project
 
 ```
-git clone (this repo's url)
-
-```
-
-Then go into that folder in the terminal depending on how you do it on your OS. 
-
-On linux:
-```
-cd (repo name)
-
-```
-
-```
+# Either this way
 deno task build
+
+# or this way
 cargo tauri build
 
 ```
 
+### Step 4 -- Find the executable file
+go under `src-tauri/target/release` and run the executable app either by running it in the terminal or by clicking on it when you're inside your file manager app.
 
+-----
 [Delta wave with Brown Noise by PureBinaural at pixabay.com](https://pixabay.com/music/ambient-purebinaural-25-hz-delta-binaural-beats-with-brown-noise-484855/)
 [Beta Waves Meditation Flute (short) by Siarhei_korbut](https://pixabay.com/music/meditationspiritual-beta-waves-meditation-flute-short-386121/)
 [Binaural Beta waves by Mr Washingt0n](https://pixabay.com/music/ambient-binaural-beta-waves-491929/)
