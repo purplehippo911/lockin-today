@@ -5,7 +5,7 @@
     "npm:@tauri-apps/cli@2": "2.11.0",
     "npm:@tauri-apps/plugin-notification@^2.3.3": "2.3.3",
     "npm:@tauri-apps/plugin-opener@2": "2.5.3",
-    "npm:@vitejs/plugin-vue@^5.2.1": "5.2.4_vite@6.4.2__sass-embedded@1.99.0_vue@3.5.33__typescript@5.6.3_sass-embedded@1.99.0",
+    "npm:@vitejs/plugin-vue@^5.2.1": "5.2.4_vite@6.4.2__sass-embedded@1.99.0_vue@3.5.33__typescript@5.6.3_sass-embedded@1.99.0_typescript@5.6.3",
     "npm:sass-embedded@^1.99.0": "1.99.0",
     "npm:typescript@~5.6.2": "5.6.3",
     "npm:vite@^6.0.3": "6.4.2_sass-embedded@1.99.0",
@@ -474,7 +474,7 @@
     "@types/estree@1.0.8": {
       "integrity": "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="
     },
-    "@vitejs/plugin-vue@5.2.4_vite@6.4.2__sass-embedded@1.99.0_vue@3.5.33__typescript@5.6.3_sass-embedded@1.99.0": {
+    "@vitejs/plugin-vue@5.2.4_vite@6.4.2__sass-embedded@1.99.0_vue@3.5.33__typescript@5.6.3_sass-embedded@1.99.0_typescript@5.6.3": {
       "integrity": "sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==",
       "dependencies": [
         "vite",
