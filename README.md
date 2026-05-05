@@ -36,31 +36,22 @@ On LINUX it is:
 cd lockin-today 
 ```
 
-### Step 3 -- installing Tauri-cli
+## Step 3 -- Building the project
 
-Install tauri-cli
-
-```
-# Either this way
-cargo install tauri-cli
-
-# or this way
-npm install -g @tauri/apps/cli
+Installing the packages:
 
 ```
+npm install
+```
 
-### Step 4 -- Finally building the project
+Finally building it:
 
 ```
-# Either this way
 deno task build
-
-# or this way
-cargo tauri build
-
 ```
 
 ### Step 5 -- Find the executable file
+
 The name of the executable file should be `lockin-today` under `src/target/release`
 
 Run that file
