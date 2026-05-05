@@ -11,9 +11,9 @@ A focus app with todos, pomodoro timer and focus music
 
 ```
 sudo pacman -S webkit2gtk-4.1 gtk3
-paru -S lockin-today-git
-
-# Or if you use yay, replace the last line with yay -S lockin-today-git
+git clone https://aur.archlinux.org/lockin-today-git.git
+cd lockin-today
+mkpkg -si
 ```
 
 ## Downloading for every other platform 
