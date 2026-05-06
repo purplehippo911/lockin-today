@@ -1,7 +1,5 @@
 [Desktop Entry]
-Name=lockinToday
-Exec=lockinToday
-Icon=lockinToday
+Name=lockin-today
+Exec=lockin-today
 Type=Application
-Categories=Office;
-
+Categories=focus;pomodoro;productivity;tasks;today;lockin;lock;
