@@ -5,7 +5,7 @@ A focus app with todos, pomodoro timer and focus music
 ## Web version 
 [lockin-today webapp](https://pomodoro-app.7c7a4f33-a16b-46f1-98bb-da21899751a8.workers.dev/)
 
-## ARCH LINUX -- Download through AUR
+## ARCH LINUX 
 
 ```
 sudo pacman -S webkit2gtk-4.1 gtk3
