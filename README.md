@@ -7,17 +7,12 @@ A focus app with todos, pomodoro timer and focus music
 
 ## ARCH LINUX -- Download through AUR
 
-
-
 ```
 sudo pacman -S webkit2gtk-4.1 gtk3
-git clone https://aur.archlinux.org/lockin-today-git.git
-cd lockin-today-git
+git clone https://github.com/purplehippo911/lockin-today.git
+cd lockin-today
 makepkg -si
 ```
-
-## ALL LINUX DISTROS
-under the `archives` folder, you'll find tar packages archive files, or whatever you call them. extract those. 
 
 ## Downloading for every other platform 
 
