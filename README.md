@@ -16,6 +16,9 @@ cd lockin-today-git
 makepkg -si
 ```
 
+## ALL LINUX DISTROS
+under the `archives` folder, you'll find tar packages archive files, or whatever you call them. extract those. 
+
 ## Downloading for every other platform 
 
 ### Step 1 -- Requirements and setup
