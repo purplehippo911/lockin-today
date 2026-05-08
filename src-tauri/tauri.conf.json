@@ -18,7 +18,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; media-src 'self' asset: https://asset.localhost https://pub-13f18a1cbe1b4e38b7891616866d988e.r2.dev;"
+      "csp": "default-src 'self'; media-src 'self' asset: https://asset.localhost https://pub-13f18a1cbe1b4e38b7891616866d988e.r2.dev; frame-src https://open.spotify.com;"
     }
   },
   "bundle": {
