@@ -16,7 +16,7 @@ makepkg -si
 
 ## Downloading for every other platform 
 
-Download from [Releases] (https://github.com/purplehippo911/lockin-today/releases/tag/v1.0.30)
+Download from [Releases](https://github.com/purplehippo911/lockin-today/releases/tag/v1.0.30)
 
 -----
 
