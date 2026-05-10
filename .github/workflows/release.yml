@@ -19,11 +19,6 @@ jobs:
         deno-version: 2.7  # Always latest stable (2.7.x now)
     - name: Install Rust
       uses: dtolnay/rust-toolchain@stable
-    - name: Install Linux deps
-      if: matrix.platform == 'ubuntu-22.04'
-      run: |
-        sudo apt update
-        sudo apt install -y libwebkit2gtk-4.1-dev libgtk-3-dev libgdk3-dev libglib2.0-dev libgirepository1.0-dev libayatana-appindicator3-dev librsvg2-dev patchelf libssl-dev libclang-dev pkg-config libadwaita-1-dev libdbus-1-dev wget curl build-essential libgdk-pixbuf2.0-dev dbus-x11 gcc-multilib git file libsqlite3-dev libxml2-dev libcairo2-dev
     - name: Cache Deno
       uses: actions/cache@v4
       with:
