@@ -1,3 +1,4 @@
+name: Publish Release
 on:
   push:
     tags: ['v*']
@@ -15,7 +16,7 @@ jobs:
     - name: Setup Deno
       uses: denoland/setup-deno@v2
       with:
-        deno-version: 1.46  # or latest stable
+        deno-version: stable  # Always latest stable (2.7.x now)
     - name: Install Rust
       uses: dtolnay/rust-toolchain@stable
     - name: Install Linux deps
@@ -23,14 +24,21 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev patchelf libssl-dev libclang-dev pkg-config
+    - name: Cache Deno
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cache/deno
+          deno.lock
+        key: deno-${{ runner.os }}-${{ hashFiles('**/deno.json', 'deno.lock') }}
     - name: Install deps & build frontend
-      run: deno task install  # or deno install && deno task build (if separate)
+      run: deno task install
     - uses: tauri-apps/tauri-action@v0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tagName: app-v__VERSION__
         releaseName: 'lockin-today v__VERSION__'
-        releaseBody: 'See CHANGELOG.md'
+        releaseBody: 'See CHANGELOG.md for details.'
         releaseDraft: false
         prerelease: false
