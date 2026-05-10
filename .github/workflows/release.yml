@@ -27,8 +27,7 @@ jobs:
           deno.lock
         key: deno-${{ runner.os }}-${{ hashFiles('**/deno.json', 'deno.lock') }}
     - name: Install deps & build frontend
-      run: deno install
-    - uses: tauri-apps/tauri-action@v0
+      run: deno install && deno task tauri build
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
