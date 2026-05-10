@@ -10,7 +10,7 @@ pkg
 lockin-today
 node_modules
 debug.keystore
-
+lockin-today-git-*
 
 
 dist

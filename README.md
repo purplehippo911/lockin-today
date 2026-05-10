@@ -18,12 +18,9 @@ makepkg -si
 
 ### Step 1 -- Requirements and setup
 
-Check out the links here to download:
-
+YOU NEED BOTH OF THESE
 - [Rust](https://rustup.rs)
-- [Deno](https://deno.land/#installation)
-- Git
-
+- Npm/deno/yarn/pnpm
 
 ### Step 2 -- Cloning repository
 
@@ -45,12 +42,14 @@ cd lockin-today
 Installing the packages:
 
 ```
+# i use deno but you can use npm/pnpm/yarn to install
 deno install
 ```
 
 Finally building it:
 
 ```
+# i use deno but you can use npm run build, or yarn or pnpm
 deno task build
 ```
 
