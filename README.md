@@ -16,48 +16,7 @@ makepkg -si
 
 ## Downloading for every other platform 
 
-### Step 1 -- Requirements and setup
-
-YOU NEED BOTH OF THESE
-- [Rust](https://rustup.rs)
-- Npm/deno/yarn/pnpm
-
-### Step 2 -- Cloning repository
-
-```
-git clone https://github.com/purplehippo911/lockin-today.git
-
-```
-
-Now go into the newly made directory before you run the other commands.
-
-On LINUX it is:
-
-```
-cd lockin-today 
-```
-
-## Step 3 -- Building the project
-
-Installing the packages:
-
-```
-# i use deno but you can use npm/pnpm/yarn to install
-deno install
-```
-
-Finally building it:
-
-```
-# i use deno but you can use npm run build, or yarn or pnpm
-deno task build
-```
-
-### Step 5 -- Find the executable file
-
-Inside `src-tauri/target/release`
-
-Run the executable file that starts with lockin-today
+Download from [Releases] (pre-built)
 
 -----
 
