@@ -33,17 +33,12 @@ jobs:
         key: deno-${{ runner.os }}-${{ hashFiles('**/deno.json', 'deno.lock') }}
     - name: Install deps & build frontend
       run: deno install && deno task tauri build
+    - uses: tauri-apps/tauri-action@v0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Upload release assets
-      uses: softprops/action-gh-release@v2
        with:
         tagName: app-v__VERSION__
         releaseName: 'lockin-today v__VERSION__'
         releaseBody: 'See CHANGELOG.md for details.'
         releaseDraft: false
         prerelease: false
-        files: |
-          src-tauri/target/release/*.exe
-          src-tauri/target/release/*.dmg  
-          src-tauri/target/release/*.deb
