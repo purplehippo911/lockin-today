@@ -19,6 +19,11 @@ jobs:
         deno-version: 2.7  # Always latest stable (2.7.x now)
     - name: Install Rust
       uses: dtolnay/rust-toolchain@stable
+    - name: Install Linux deps
+      if: matrix.platform == 'ubuntu-latest'
+      run: |
+        sudo apt update
+        sudo apt install -y libwebkit2gtk-4.1-dev libgtk-3-dev libglib2.0-dev libgirepository1.0-dev libayatana-appindicator3-dev librsvg2-dev
     - name: Cache Deno
       uses: actions/cache@v4
       with:
@@ -30,9 +35,15 @@ jobs:
       run: deno install && deno task tauri build
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
+    - name: Upload release assets
+      uses: softprops/action-gh-release@v2
+       with:
         tagName: app-v__VERSION__
         releaseName: 'lockin-today v__VERSION__'
         releaseBody: 'See CHANGELOG.md for details.'
         releaseDraft: false
         prerelease: false
+        files: |
+          src-tauri/target/release/*.exe
+          src-tauri/target/release/*.dmg  
+          src-tauri/target/release/*.deb
